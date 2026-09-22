@@ -1,3 +1,7 @@
+<!-- BEGIN hub fork note -->
+> **This is the CircuitBoardGames fork of [RinDig/icm-architect](https://github.com/RinDig/icm-architect)**, adapted to run on the ClaudeCode hub. The only divergence is [`references/hub.md`](references/hub.md), which maps ICM's layers onto the hub's harness-delivered ones and scopes where the skill applies, plus one routing line in `SKILL.md`, a link-and-frontmatter test (`tests/`) for the forge gate, and `.upstream-provenance.json`. Upstream syncs merge around these; the method itself is unchanged.
+<!-- END hub fork note -->
+
 # icm-architect
 
 A Claude skill that designs any process, idea, or problem into an **ICM workspace** — folder structure as agent architecture — or restructures an existing folder, repo, or vault into one.
