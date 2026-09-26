@@ -11,7 +11,7 @@ The hub's layers are delivered by the harness, not by convention, and that is st
 
 | ICM layer | On the hub |
 |---|---|
-| L0 entry file | `.claude/CLAUDE.md`. Its size is governed by `.claude/rules/claude-md-budget.md`, not by the ~60-line target |
+| L0 entry file | `AGENTS.md`. Its size is governed by `.claude/rules/claude-md-budget.md`, not by the ~60-line target |
 | L1/L2 contracts | `.claude/rules/*.md` with `paths:` frontmatter, injected when a matching tree is touched |
 | L3 reference | `docs/agents/` (runbooks), the Wiki-Vault repo (`wiki/gotchas/`) |
 | L4 product | per-task worktrees and their PRs |
@@ -19,9 +19,9 @@ The hub's layers are delivered by the harness, not by convention, and that is st
 So, in the hub repo:
 
 - **No `CONTEXT.md` per folder.** A folder that needs a contract gets a path-scoped rule.
-- **No `AGENTS.md` / `routing.md` twins.** Claude Code and omp both load `.claude/CLAUDE.md`, and a
+- **No `AGENTS.md` / `routing.md` twins.** Claude Code and omp both load `AGENTS.md`, and a
   twin is one more always-loaded surface to keep in sync.
-- **Never propose shrinking `.claude/CLAUDE.md` to the ICM target.** Moving content out of it follows
+- **Never propose shrinking `AGENTS.md` to the ICM target.** Moving content out of it follows
   `claude-md-budget.md`; `.claude/hooks/instruction-file-guard.py` delivers that rule on edit.
 - **The Wiki-Vault is out of scope.** Its conventions are claude-obsidian's plus OKF's `type`
   frontmatter; the Knowledge-bundle form would compete with them.
