@@ -23,7 +23,7 @@ So, in the hub repo:
   twin is one more always-loaded surface to keep in sync.
 - **Never propose shrinking `AGENTS.md` to the ICM target.** Moving content out of it follows
   `claude-md-budget.md`; `.claude/hooks/instruction-file-guard.py` delivers that rule on edit.
-- **The Wiki-Vault is out of scope.** Its conventions are claude-obsidian's plus OKF's `type`
+- **The Wiki-Vault is out of scope.** Its conventions are its own `AGENTS.md` plus OKF's `type`
   frontmatter; the Knowledge-bundle form would compete with them.
 
 ## What it is for here
