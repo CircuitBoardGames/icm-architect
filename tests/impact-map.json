@@ -1,0 +1,26 @@
+{
+ "generated": {
+  "sha": "d2e67ed5ed1e77c88386e00294ed923bb61def74",
+  "time": "2026-10-18T20:49:52Z"
+ },
+ "tests": {
+  "tests/test_skill_links.py": [
+   "SKILL.md",
+   "assets/templates",
+   "assets/templates/CLAUDE.md",
+   "assets/templates/CONTEXT.md",
+   "assets/templates/node.md",
+   "assets/templates/object.md",
+   "assets/templates/process.md",
+   "assets/templates/questionnaire.md",
+   "assets/templates/schema.md",
+   "assets/templates/stage-CONTEXT.md",
+   "references/core.md",
+   "references/forms.md",
+   "references/hub.md",
+   "references/reference-integrity.md",
+   "references/system-map.md",
+   "tests/test_skill_links.py"
+  ]
+ }
+}
