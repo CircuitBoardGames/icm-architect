@@ -1,7 +1,7 @@
 {
  "generated": {
-  "sha": "d2e67ed5ed1e77c88386e00294ed923bb61def74",
-  "time": "2026-10-18T20:49:52Z"
+  "sha": "aea255dbe84f6d63945c5908c5f207b2b8eb2f1c",
+  "time": "2026-10-25T04:45:14Z"
  },
  "tests": {
   "tests/test_skill_links.py": [
