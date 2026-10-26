@@ -6,13 +6,9 @@ license: MIT
 
 # ICM Architect
 
-<<<<<<< HEAD
 > **On the CircuitBoardGames hub, read [references/hub.md](references/hub.md) first — it overrides the defaults below for that host.**
 
-Build workspaces where the folder structure does the orchestration. One agent, reading the right files at the right moment, replaces a multi-agent framework: numbered folders carry sequencing, hierarchy carries context scoping, plain markdown files carry state. A human can open any folder and see exactly what state the system is in, because state is just files.
-=======
 Build workspaces where the folder structure does the orchestration. One agent, reading the right files at the right moment, replaces a multi-agent framework: numbered folders carry sequencing, hierarchy carries context scoping, plain markdown files carry state. A person can open any folder and see what state the system is in, because state is just files. The routing files are the catalog: small and stable, they point at the shelves where the content lives.
->>>>>>> upstream/main
 
 Method: Interpretable Context Methodology (Van Clief & McDermott, arXiv:2603.16021, MIT-licensed). It runs in any agent or model that can read files: nothing in a workspace depends on one vendor's tools.
 
