@@ -9,8 +9,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LINK = re.compile(r"\]\(([^)#\s]+)(?:#[^)]*)?\)")
-DOCS = [ROOT / "SKILL.md", *sorted((ROOT / "references").glob("*.md")),
-        *sorted((ROOT / "assets").rglob("*.md"))]
+# assets/ holds templates whose links resolve inside the workspace they are copied into, not here.
+DOCS = [ROOT / "SKILL.md", *sorted((ROOT / "references").glob("*.md"))]
 
 
 def test_every_relative_link_resolves():
