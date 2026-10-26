@@ -140,8 +140,8 @@ SHELL = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <title>OKF Bundle Viewer</title>
-<script src="https://cdn.jsdelivr.net/npm/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cytoscape@3.28.1/dist/cytoscape.min.js" integrity="sha384-J7Q85oZE4GJ/e7+n2aOQsLXfDwwfnA8S2nZAL5BpFsfpCF84zQD7LroZ/dMnLgex" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
 <style>
 * { box-sizing: border-box; }
 body {
@@ -337,6 +337,9 @@ window.BUNDLE = __DATA__;
 </script>
 <script>
 (function () {
+  // Note bodies can quote third-party sources, and marked does not sanitize: raw HTML is shown as text.
+  const escapeHtml = (s) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+  marked.use({ renderer: { html: (html) => escapeHtml(html) } });
   const bundle = window.BUNDLE;
   const bundleName = window.BUNDLE_NAME;
   document.title = `${bundleName} — OKF Viewer`;
@@ -555,6 +558,10 @@ window.BUNDLE = __DATA__;
     root.querySelectorAll("a[href]").forEach((a) => {
       const href = a.getAttribute("href");
       if (!href) return;
+      if (/^[a-z][a-z0-9+.-]*:/i.test(href) && !/^(https?|mailto):/i.test(href)) {
+        a.removeAttribute("href");  // javascript:, data: and the like from a note never become live links
+        return;
+      }
       if (href.startsWith("/") && href.endsWith(".md")) {
         const target = href.slice(1, -3);
         if (nodeIndex[target]) {
