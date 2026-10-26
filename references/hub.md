@@ -29,7 +29,7 @@ So, in the hub repo:
 ## What it is for here
 
 1. **Restructure mode on a carve-out** (files leaving one hub repo for another). This is the main
-   use. Run step 4 (`reference-integrity.md`) as written. On this box the external referrers it asks
+   use. Run step 4 (SKILL.md, Restructure mode) as written. On this box the external referrers it asks
    about are enumerable, so search them rather than only asking the owner:
    - `/etc/cron.d/`, `/etc/systemd/system/`, symlinks in `/usr/local/bin/`;
    - every sibling checkout under `/home/claudeadmin/` (Box-Ops, AgentOS, Wiki-Vault, …), plus
